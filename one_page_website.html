@@ -3,28 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>John Cookie Company</title>
+	<link rel="stylesheet" href="./CSS/onepagewebsite.css">
 </head>
 <body>
     <header>
         <h1>John Cookie Company</h1>
-		<img src="cookie.jpg" alt="cookies" width=2100 height=500>
+		<img src="img/cookie.jpg" alt="cookies" width=2100 height=500>
         
         <!-- Navigation Menu -->
-        <div>
-				<ul>
-					<a href="#home" id="link"><li>HOME</li></a>
-					<a href="#Aboutus"><li>About Us!</li></a>
-					<a href="#contact"><li>Order Now</li></a>
-				
-				</ul>
-		</div>
+        <nav>
+            <ul style="list-style: none; padding: 0; margin: 0; display: inline-block;">
+                <li style="display: inline;"><a href="#home" id="link">HOME</a></li>
+                <li style="display: inline;"><a href="#Aboutus">About Us!</a></li>
+                <li style="display: inline;"><a href="#contact">Order Now</a></li>
+            </ul>
+        </nav>
     </header>
 	<section>
-        <h2>Home Page</h2>
-        <p>Welcome to the official website of John Cookie Company! We’re proud to share our love of baking with cookie lovers around the world.</p>
+		<h2>Home Page</h2>
+    <div>
+		<p>Welcome to the official website of John Cookie Company! We’re proud to share our love of baking with cookie lovers around the world.</p>
         <p>On our home page, you’ll find everything from our story, our unique ingredients, and links to our famous recipes.<br>
 		Whether you're a longtime fan or a new visitor, we hope you find something sweet here.</p>
-    </section>
+    </div>
+	</section>
+
 
 <div id="Aboutus">
    <section>
@@ -51,6 +54,21 @@
 						<p>
 							Please provide us with your basic contact information.
 						</p>
+						
+						  <section id="gallery">
+        <h2>Cookie Gallery</h2>
+        <div class="gallery-row">
+            <img src="img/cookie1.jpg" alt="Cookie 1" class="lightbox-thumb" onclick="openLightbox('img/cookie1.jpg')">
+            <img src="img/cookie2.jpg" alt="Cookie 2" class="lightbox-thumb" onclick="openLightbox('img/cookie2.jpg')">
+            <img src="img/cookie3.jpg" alt="Cookie 3" class="lightbox-thumb" onclick="openLightbox('img/cookie3.jpg')">
+        </div>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()" style="display:none;">
+            <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="" alt="Large Cookie">
+        </div>
+    </section>
+    <script src="js/one_page_website.js"></script>
+
 						<div id="contact">
 							<form action="" method="post">
 								<input class="rsvp" type="text" value="First Name">
@@ -68,5 +86,6 @@
 			<footer>
 				www.JohnCookiecompany.ca  &nbsp|&nbsp; &copy; 2025
 			</footer>
+  
 </body>
 </html>
